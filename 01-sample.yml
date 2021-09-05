@@ -15,5 +15,5 @@
       ansible.builtin.debug:
         msg: Bye
     - name: World
-      ansible.inbuilt.debug:
+      ansible.builtin.debug:
         msg: World
