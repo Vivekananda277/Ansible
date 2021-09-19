@@ -5,9 +5,9 @@
   tasks:
     - name: Print a variable
       ansible.builtin.debug:
-        msg: "URL={{URL}}"
+        msg: URL={{URL}}
     - name: Print task variable
       ansible.builtin.debug:
-        msg: "URL={{URL}}"
+        msg: URL={{URL}}
       vars:
         URL: task.google.com
