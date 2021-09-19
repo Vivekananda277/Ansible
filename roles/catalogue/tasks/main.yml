@@ -36,7 +36,7 @@
 - name: Setup Catalogue service file
   copy:
     src: systemd.service
-    dest: /home/roboshop/catalogue/catalogue.service
+    dest: /etc/systemd/system/catalogue.service
 
 - name: Start catalogue service
   systemd:
