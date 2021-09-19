@@ -22,7 +22,7 @@
 
 - name: Download Frontend Archive
   ansible.builtin.unarchive:
-    src: curl -s -L -o /tmp/mongodb.zip "https://github.com/roboshop-devops-project/mongodb/archive/main.zip"
+    src: "https://github.com/roboshop-devops-project/mongodb/archive/main.zip"
     dest: /tmp
     remote_src: yes
 
