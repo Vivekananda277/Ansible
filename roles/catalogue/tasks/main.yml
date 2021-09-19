@@ -9,9 +9,9 @@
   user:
     name: roboshop
 
-- name: Download Frontend Archive
+- name: Download Catalogue Archive
   ansible.builtin.unarchive:
-    src: "https://github.com/roboshop-devops-project/frontend/archive/main.zip"
+    src: "https://github.com/roboshop-devops-project/catalogue/archive/main.zip"
     dest: /tmp
     remote_src: yes
 
@@ -20,7 +20,7 @@
     path: /home/roboshop/catalogue
     state: absent
 
-- name: Copy Extracted Content to Nginx Path
+- name: Copy Extracted Content to catalogue Path
   ansible.builtin.copy:
     src: /tmp/catalogue-main/
     dest: /home/roboshop/catalogue/
