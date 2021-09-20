@@ -5,7 +5,7 @@
 [CATALOGUE]
 172.31.94.210
 [REDIS]
-redis.roboshop.internal
+172.31.88.84
 [USER]
 user.roboshop.internal
 [CART]
