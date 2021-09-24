@@ -4,11 +4,11 @@
     dest: /opt
     remote_src: yes
 
-#- name: Create a link pf proemtheus with standard directory name
- # file:
-   # src: /opt/node_exporter-{{NE_VERSION}}.linux-amd64
-   # dest: /opt/node_exporter
-    #state: link
+- name: Create a link pf proemtheus with standard directory name
+   file:
+    src: /opt/node_exporter-{{NE_VERSION}}.linux-amd64
+    dest: /opt/node_exporter
+    state: link
 
 - name: Copy systemD file
   copy:
