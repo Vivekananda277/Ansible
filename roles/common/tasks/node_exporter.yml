@@ -5,7 +5,7 @@
     remote_src: yes
 
 - name: Create a link pf proemtheus with standard directory name
-   file:
+  file:
     src: /opt/node_exporter-{{NE_VERSION}}.linux-amd64
     dest: /opt/node_exporter
     owner: root
