@@ -1,0 +1,24 @@
+- name: Download node exporter
+  unarchive:
+    src: "https://github.com/prometheus/node_exporter/releases/download/v{{NE_VERSION}}/node_exporter-{{NE_VERSION}}.linux-amd64.tar.gz"
+    dest: /opt
+    remote_src: yes
+
+- name: Create a link pf proemtheus with standard directory name
+  file:
+    src: /opt/node_exporter-{{NE_VERSION}}.linux-amd64
+    dest: /opt/node_exporter
+    state: link
+
+- name: Copy systemD file
+  copy:
+    src: node_exporter.service
+    dest: /etc/systemd/system/node_exporter.service
+
+- name: Start Node exporter
+  systemd:
+     name: node_exporter
+     state: started
+     enabled: yes
+     daemon_reload: yes
+
