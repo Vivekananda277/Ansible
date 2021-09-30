@@ -1,7 +1,11 @@
-- name: Update Prometheus config
+- name: Update prometheus,records amd alerts file
   template:
-    src: prometheus.yml
-    dest: /opt/prometheus/prometheus.yml
+    src: "{{item}}.yml"
+    dest: /opt/prometheus/{{item}}.yml
+  loop:
+    - promethues
+    - records
+    - alerts
 
 - name: Restart Prometheus Service
   systemd:
