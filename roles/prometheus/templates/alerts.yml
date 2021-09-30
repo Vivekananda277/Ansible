@@ -7,4 +7,4 @@ groups:
     labels:
       severity: critical
     annotations:
-      summary: HighCPU on {{ $labels.tagName }}
+      summary: HighCPU on {%raw%}{{ $labels.tagName }}
