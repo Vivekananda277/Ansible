@@ -17,12 +17,12 @@ groups:
      #   annotations:
       #    summary: "HighMem Usage on {% raw %}{{ $labels.tagName }}{% endraw %}"
 
- # - name: Services
-#    rules:
-#      - alert: ServiceDown
- #       expr: roboshop_app_monitor == 0
-#        for: 1m
- #       labels:
- #         severity: critical
- #       annotations:
-#          summary: {% raw %}"Service {{ $labels.name }}  Down on {{ $labels.tagName }} Server"{% endraw %}
+- name: Services
+  rules:
+   - alert: ServiceDown
+     expr: roboshop_app_monitor == 0
+     for: 1m
+     labels:
+       severity: critical
+     annotations:
+       summary: {% raw %}"Service {{ $labels.name }}  Down on {{ $labels.tagName }} Server"{% endraw %}
