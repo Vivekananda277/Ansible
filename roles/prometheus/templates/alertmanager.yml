@@ -3,6 +3,9 @@ global:
   slack_api_url : "https://hooks.slack.com/services/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"
 
 route:
+  group_wait: 30s
+  group_interval: 1m
+  repeat_interval: 1m
   receiver: 'slack-notifications'
 
 receivers:
