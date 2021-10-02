@@ -15,7 +15,7 @@
         labels:
           severity: critical
         annotations:
-          summary: "HighMem Usage on {%raw%}{{ $labels.tagName }}{%endraw%}"
+          summary: "HighMem Usage on {% raw %}{{ $labels.tagName }}{% endraw %}"
 
   - name: Services
     rules:
