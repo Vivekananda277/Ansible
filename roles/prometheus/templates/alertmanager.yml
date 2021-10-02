@@ -11,3 +11,9 @@ receivers:
   - channel: '#prom-alerts'
     send_resolved: true
 
+inhibit_rules:
+  - source_match:
+      severity: 'critical'
+    target_match:
+      severity: 'warning'
+    equal: ['alertname', 'dev', 'instance']
