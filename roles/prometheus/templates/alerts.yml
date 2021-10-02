@@ -2,7 +2,7 @@ groups:
 - name: High CPU utilisation
   rules:
   - alert: High_CPU_Utilisation
-    expr: cpu_usage_in_percentage > 60
+    expr: cpu_usage_in_percentage > 80
     for: 1m
     labels:
       severity: critical
