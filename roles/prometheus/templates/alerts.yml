@@ -1,13 +1,13 @@
-#groups:
-#- name: High CPU utilisation
-#  rules:
-#  - alert: High_CPU_Utilisation
-#    expr: cpu_usage_in_percentage > 80
- #   for: 1m
-#    labels:
- #     severity: critical
- #   annotations:
-#      summary: HighCPU on {% raw %}{{$labels.tagName}}{% endraw %}
+groups:
+- name: High CPU utilisation
+  rules:
+  - alert: High_CPU_Utilisation
+    expr: cpu_usage_in_percentage > 80
+    for: 1m
+    labels:
+      severity: critical
+    annotations:
+      summary: HighCPU on {% raw %}{{$labels.tagName}}{% endraw %}
 
 #- alert: HighMemUsage
  #       expr: ceil((node_memory_MemTotal_bytes - node_memory_MemAvailable_bytes) / node_memory_MemTotal_bytes * 100) > 90
@@ -17,12 +17,12 @@
      #   annotations:
       #    summary: "HighMem Usage on {% raw %}{{ $labels.tagName }}{% endraw %}"
 
-  - name: Services
-    rules:
-      - alert: ServiceDown
-        expr: roboshop_app_monitor == 0
-        for: 1m
-        labels:
-          severity: critical
-        annotations:
-          summary: {% raw %}"Service {{ $labels.name }}  Down on {{ $labels.tagName }} Server"{% endraw %}
+ # - name: Services
+#    rules:
+#      - alert: ServiceDown
+ #       expr: roboshop_app_monitor == 0
+#        for: 1m
+ #       labels:
+ #         severity: critical
+ #       annotations:
+#          summary: {% raw %}"Service {{ $labels.name }}  Down on {{ $labels.tagName }} Server"{% endraw %}
