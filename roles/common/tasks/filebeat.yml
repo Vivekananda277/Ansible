@@ -1,0 +1,25 @@
+- name: Import Filebeat RPM Key
+  ansible.builtin.rpm_key:
+    state: present
+    key: https://packages.elastic.co/GPG-KEY-elasticsearch
+
+- name: Copy Yum repo file
+  copy:
+    src: es.repo
+    dest: /etc/yum.repos.d/es.repo
+
+- name: Install filebeat
+  yum:
+    name: filebeat
+    state: installed
+
+- name: Update Filebeat Configuration
+  template:
+    src: filebeat.yml
+    dest: /etc/filebeat/filebeat.yml
+
+- name: Start Filebeat service
+  systemd:
+    name: filebeat
+    state: restarted
+    enabled: yes

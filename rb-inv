@@ -1,9 +1,9 @@
 [FRONTEND]
 172.31.20.125
 [MONGODB]
-172.31.24.54
+#172.31.24.54
 [CATALOGUE]
-172.31.24.74
+catalogue.roboshop.internal
 [REDIS]
 172.31.21.70
 [USER]
