@@ -3,7 +3,7 @@
 [MONGODB]
 #172.31.24.54
 [CATALOGUE]
-catalogue.roboshop.internal
+172.31.86.248
 [REDIS]
 172.31.21.70
 [USER]
