@@ -10,6 +10,7 @@ setup.template.pattern: "{{COMPONENT}}-*"
 
 output.elasticsearch:
    hosts: ["elasticsearch.roboshop.internal:9200"]
+   index: "{{COMPONENT}}-%{+yyyy.MM.dd}"
 
 ###DEFAULT CONFIGURATION###
 filebeat.config.modules:
