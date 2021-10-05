@@ -1,4 +1,6 @@
 [CATALOGUE]
-172.31.86.248
+catalogue.roboshop.internal
 [CART]
 cart.roboshop.internal
+[USER]
+user.roboshop.internal
