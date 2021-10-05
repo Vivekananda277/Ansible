@@ -6,7 +6,7 @@
 - name: Copy yum repo file
   copy:
     src: es.repo
-    des: /etc/yum.repos.d/es.repo
+    dest: /etc/yum.repos.d/es.repo
 
 
 - name: Install Filebeat
