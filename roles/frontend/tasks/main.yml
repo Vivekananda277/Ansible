@@ -25,10 +25,10 @@
     src: roboshop.conf
     dest: /etc/nginx/default.d/roboshop.conf
 
-- name: Restart Nginx
+- name: Start Nginx
   systemd:
-    name:  nginx
-    state: restarted
+    name: nginx
+    state: started
     enabled: yes
 
 - name: Include Node_exporterr
