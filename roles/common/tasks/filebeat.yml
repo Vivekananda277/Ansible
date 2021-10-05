@@ -14,6 +14,11 @@
     name: filebeat
     state: present
 
+- name: Update Filebeat Configuration
+  template:
+    src: filebeat.yml
+    dest: /etc/filebeat/filebeat.yml
+
 - name: Start filebeat
   systemd:
     name: filebeat
