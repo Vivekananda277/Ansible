@@ -44,3 +44,4 @@
     tasks_from: filebeat.yml
   vars:
     OUTPUT_TO: logstash
+    NGINX: true
