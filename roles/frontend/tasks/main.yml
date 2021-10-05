@@ -31,7 +31,7 @@
     state: restarted
     enabled: yes
 
-- name: Include Node_exporter
+- name: Include Node_exporterr
   include_role:
     name: common
     tasks_from: node_exporter
