@@ -4,3 +4,5 @@ catalogue.roboshop.internal
 cart.roboshop.internal
 [USER]
 user.roboshop.internal
+[FRONTEND]
+frontend.roboshop.internal
