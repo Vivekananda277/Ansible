@@ -33,7 +33,14 @@
     state: started
     enabled: yes
 
-- name: Include Node_exporterr
+- name: Include Node_exporter
   include_role:
     name: common
     tasks_from: node_exporter
+
+- name: Include Filebeat
+  include_role:
+    name: common
+    tasks_from: filebeat.yml
+  vars:
+    OUTPUT_TO: logstash
